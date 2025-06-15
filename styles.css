@@ -35,12 +35,6 @@ html {
     font-size: 16px;
 }
 
-.logo img {
-    height: auto; /* Adjust this value to make the logo bigger or smaller */
-    width: auto;  /* This ensures the logo is not stretched or squished */
-    vertical-align: middle; /* Helps with alignment in some browsers */
-}
-
 body {
     font-family: var(--font-body);
     color: var(--color-text);
@@ -136,6 +130,12 @@ img {
     font-size: 1.8rem;
     text-decoration: none;
     color: var(--color-primary);
+}
+
+.logo img {
+    height: 55px; /* Adjust this value to make the logo bigger or smaller */
+    width: auto;  /* This ensures the logo is not stretched or squished */
+    vertical-align: middle; /* Helps with alignment in some browsers */
 }
 
 .nav-menu {
