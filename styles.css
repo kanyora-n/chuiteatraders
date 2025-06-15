@@ -36,7 +36,7 @@ html {
 }
 
 .logo img {
-    height: 55px; /* Adjust this value to make the logo bigger or smaller */
+    height: 30px; /* Adjust this value to make the logo bigger or smaller */
     width: auto;  /* This ensures the logo is not stretched or squished */
     vertical-align: middle; /* Helps with alignment in some browsers */
 }
