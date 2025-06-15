@@ -12,16 +12,14 @@
 
 /* ======== 1. CSS VARIABLES & BASIC SETUP ======== */
 :root {
-    --color-primary: #2c3e50;       /* A deep, professional blue-charcoal */
-    --color-secondary: #8e44ad;     /* A muted, elegant purple for accents */
-    --color-accent: #e67e22;        /* A warm, earthy orange for CTAs */
+    --color-primary: #5a643d;       /* A deep, earthy green from the logo's outer ring */
+    --color-secondary: #5d4037;     /* A rich, warm brown from the 'Chui' text */
+    --color-accent: #8bc34a;        /* The bright, fresh green from the tea leaves */
     --color-background: #fdfdfd;    /* A very light, clean background */
-    --color-text: #34495e;          /* A softer, more readable dark grey */
-    --color-light-gray: #ecf0f1;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Lato', sans-serif;
+    --color-text: #333333;          /* A slightly darker text for better contrast */
+    --color-light-gray: #f5f5f5;
     --container-width: 1140px;
-    --section-padding: 6rem 0; /* 96px top/bottom */
+    --section-padding: 6rem 0;
 }
 
 *,
@@ -35,6 +33,12 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+}
+
+.logo img {
+    height: 55px; /* Adjust this value to make the logo bigger or smaller */
+    width: auto;  /* This ensures the logo is not stretched or squished */
+    vertical-align: middle; /* Helps with alignment in some browsers */
 }
 
 body {
