@@ -2,25 +2,20 @@
  * STYLESHEET FOR CHUI TRADERS
  * Author: Your Name (As a Senior Software Engineer)
  * Date: June 2025
- *
- * This stylesheet uses modern CSS practices including:
- * - CSS Variables for easy theme management.
- * - A mobile-first responsive design approach.
- * - Flexbox and Grid for robust layouts.
- * - Smooth transitions and subtle animations for a premium feel.
  */
 
 /* ======== 1. CSS VARIABLES & BASIC SETUP ======== */
 :root {
     --color-primary: #5a643d;       /* A deep, earthy green from the logo's outer ring */
     --color-secondary: #5d4037;     /* A rich, warm brown from the 'Chui' text */
-    --color-accent: #8bc34a;        /* The bright, fresh green from the tea leaves */
+    --color-accent: #e67e22;        /* A warm, earthy orange for CTAs */
     --color-background: #fdfdfd;    /* A very light, clean background */
     --color-text: #333333;          /* A slightly darker text for better contrast */
     --color-light-gray: #f5f5f5;
     --container-width: 1140px;
-    --section-padding: 6rem 0;
+    --section-padding: 6rem 0; /* 96px top/bottom */
 }
+
 
 *,
 *::before,
@@ -36,7 +31,7 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: 'Lato', sans-serif;
     color: var(--color-text);
     background-color: var(--color-background);
     line-height: 1.6;
@@ -54,7 +49,7 @@ body {
 }
 
 .section-title {
-    font-family: var(--font-heading);
+    font-family: 'Playfair Display', serif;
     font-size: 2.8rem; /* ~45px */
     color: var(--color-primary);
     text-align: center;
@@ -71,7 +66,7 @@ body {
 .btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
-    font-family: var(--font-body);
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     text-decoration: none;
     border-radius: 5px;
@@ -112,7 +107,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease-in-out;
@@ -126,22 +121,29 @@ img {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
     text-decoration: none;
-    color: var(--color-primary);
 }
 
 .logo img {
-    height: 55px; /* Adjust this value to make the logo bigger or smaller */
-    width: auto;  /* This ensures the logo is not stretched or squished */
-    vertical-align: middle; /* Helps with alignment in some browsers */
+    height: 50px; /* Adjusted slightly for desktop */
+    width: auto;
+    vertical-align: middle;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 .nav-menu {
     display: flex;
+    align-items: center; 
     list-style: none;
-    align-items: center;
     gap: 2rem;
 }
 
@@ -184,7 +186,7 @@ img {
 }
 
 .hero-title {
-    font-family: var(--font-heading);
+    font-family: 'Playfair Display', serif;
     font-size: 4rem;
     margin-bottom: 1rem;
 }
@@ -196,6 +198,9 @@ img {
 }
 
 /* ======== 5. PRODUCTS SECTION ======== */
+.products-section {
+    background-color: var(--color-light-gray);
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -222,7 +227,7 @@ img {
 }
 
 .product-card h3 {
-    font-family: var(--font-heading);
+    font-family: 'Playfair Display', serif;
     color: var(--color-primary);
     padding: 1.5rem 1.5rem 0.5rem 1.5rem;
 }
@@ -231,9 +236,33 @@ img {
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
-/* ======== 6. ABOUT TEA SECTION ======== */
+
+/* ======== 6. NEW CONTENT SECTIONS STYLES ======== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-item {
+    padding: 1.5rem;
+    border-bottom: 3px solid var(--color-primary);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.info-item h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-secondary);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ======== 7. ABOUT TEA SECTION ======== */
 .about-tea-section {
-    background-color: var(--color-light-gray);
+    background-color: white;
 }
 .about-tea-content {
     display: grid;
@@ -251,7 +280,10 @@ img {
     text-align: left;
 }
 
-/* ======== 7. CSR SECTION ======== */
+/* ======== 8. CSR SECTION ======== */
+.csr-section {
+     background-color: var(--color-light-gray);
+}
 .csr-pillars {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -266,13 +298,13 @@ img {
 }
 
 .pillar h4 {
-    font-family: var(--font-heading);
+    font-family: 'Playfair Display', serif;
     color: var(--color-primary);
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-/* ======== 8. FOOTER ======== */
+/* ======== 9. FOOTER ======== */
 .footer {
     background-color: var(--color-primary);
     color: var(--color-light-gray);
@@ -285,7 +317,7 @@ img {
     padding-bottom: 3rem;
 }
 .footer h3 {
-    font-family: var(--font-heading);
+    font-family: 'Playfair Display', serif;
     color: white;
     margin-bottom: 1rem;
 }
@@ -309,7 +341,7 @@ img {
 }
 
 
-/* ======== 9. ANIMATIONS & RESPONSIVE DESIGN ======== */
+/* ======== 10. ANIMATIONS & RESPONSIVE DESIGN ======== */
 
 /* Scroll-triggered fade-in animation */
 .animate-on-scroll {
@@ -330,15 +362,15 @@ img {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 70px; /* Match navbar height */
         flex-direction: column;
         background-color: white;
         width: 100%;
         height: 100vh;
         text-align: center;
         transition: 0.3s;
-        gap: 2rem;
-        padding-top: 2rem;
+        gap: 0; /* Remove gap for full-width links */
+        padding-top: 1rem;
     }
 
     .nav-menu.active {
@@ -347,10 +379,16 @@ img {
 
     .nav-link {
         font-size: 1.5rem;
+        display: block;
+        width: 100%;
+        /* Fat-finger friendly links */
+        padding: 1.5rem 0;
     }
 
     .hamburger {
         display: block;
+        /* Fat-finger friendly hamburger */
+        padding: 10px; 
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -387,8 +425,20 @@ img {
     .hero-subtitle {
         font-size: 1.2rem;
     }
+    
+    /* NEW: Larger logo on mobile */
+    .logo img {
+        height: 60px;
+    }
 
+    /* NEW: Stack product cards in a single column */
     .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* NEW: Make buttons "fat-finger friendly" */
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
     }
 }
